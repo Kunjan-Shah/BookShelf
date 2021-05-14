@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Register
+{% endblock %}
+
+{% block main %}
+    <div class="form-container">
+        <form action="/register" method="post">
+             <h3>Register</h3>
+             {% if error %}
+                <header>
+                    <div class="alert text-center error_text" role="alert">
+                        {{ error }}
+                    </div>
+                </header>
+             {% endif %}
+          <div class = "form-group">
+            <input type="text" autofocus autocomplete="off" class="form-control" name="name" placeholder="Name" required>
+          </div>
+
+          <div class = "form-group">
+            <input type="text" autofocus autocomplete="off" class="form-control" name="username" placeholder="Username" required>
+          </div>
+
+          <div class = "form-group">
+            <input type="password" autofocus autocomplete="off" class="form-control" name="password" placeholder="Password" required>
+          </div>
+
+          <div class = "form-group">
+            <input type="password" autofocus autocomplete="off" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+          </div>
+
+                        <button class="btn btn-primary log-btn" type="submit">Register</button>
+                        <div class="form-text">
+                          <span>OR</span>
+                          <br>
+                          Already have an account?
+                        </div>
+                        <a href="/login"><button class="btn btn-dark" type="button">Log In</button></a>
+                    </form>
+                </div>
+{% endblock %}

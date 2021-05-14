@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <main class="container set-padding-for-container">
+            <div class="caption">Search a book!</div>
+            <div class="searchbar">
+                    <form action="/" method="post">
+                        <div class = "form-group">
+                            <input type="text" name="booksearch" id="booksearch" placeholder="Search by title/author/ISBN" autocomplete="off" class="form-control">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+            </div>
+            <div class="result-text">
+                {% if trending_books %}
+                    Trending Books
+                {% else %}
+                    You searched for "{{query}}"
+                {% endif %}
+            </div>
+            <div class="table-wrap">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>ISBN</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            {% if trending_books %}<th>Rating by Goodreads</th>{% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if trending_books %}
+                            {%for book in trending_books%}
+                                <tr data-href="{{ url_for('book', isbn=book.isbn) }}">
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.isbn}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.title}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.author}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.year}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.rating_by_goodreads}}</a></td>
+                                </tr>
+                            {%endfor%}
+                        {% else %}
+                            {% for book in search_results %}
+                                <tr data-href="{{ url_for('book', isbn=book.isbn) }}">
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.isbn}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.title}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.author}}</a></td>
+                                    <td><a href="{{ url_for('book', isbn=book.isbn) }}">{{book.year}}</a></td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+    </main>
+    <script>
+        $('*[data-href]').on("click",function(){
+        window.location = $(this).data('href');
+        return false;
+        });
+        $("td > a").on("click",function(e){
+        e.stopPropagation();
+        });
+    </script>
+{% endblock %}

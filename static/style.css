@@ -1,0 +1,404 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url('/static/form_cover_img.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-index{
+    background-image: url('/static/homebg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.align-form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+}
+
+.form-container{
+    width: 400px;
+    height: auto;
+    border: 1px solid #ddd;
+    background-color: #ffffffa3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    transition: border-top-right-radius 1s, border-bottom-left-radius 1s, border-top-left-radius 1s, border-bottom-right-radius 1s;
+}
+
+.form-container:hover{
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.form-container h3{
+    margin-bottom: 1.5rem;
+    font-size: 30px;
+}
+
+.form-container form{
+    width: 100%;
+}
+
+.form-container form .form-group{
+    margin-bottom: 1.5rem;
+}
+
+.form-container form .form-control{
+    width: 85% !important;
+}
+
+.form-container form .log-btn{
+    left: 0px;
+    width: 85% !important;
+}
+
+.form-container .form-text{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-container .form-text span{
+    font-weight: bold;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_text{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main table
+{
+     text-align: left
+}
+
+.log-btn{
+    position: relative;
+    left: -15px;
+}
+
+.register-btn{
+    position: relative;
+    left: 25px;
+}
+
+.logo{
+    height: 40px;
+}
+
+.navbar{
+    height: 3.5rem;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.navbar-brand span{
+    color: #00eaff;
+    font-size: 28px;
+}
+
+.navbar-brand{
+    display: flex !important;
+    align-items: center;
+}
+
+nav{
+    background-color:#33333380 !important;
+}
+
+.nav-link{
+    color: #fff !important;
+    font-size: 18px;
+}
+
+#navbar{
+    height: 100%;
+}
+
+#navbar ul, .nav-item{
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#navbar li:hover{
+    background-color: #0000008a;
+}
+
+.set-padding-for-container{
+    padding: 1.5rem 3rem!important;
+}
+
+.caption{
+    font-size: 45px;
+    font-family: inherit;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #ffc107;
+}
+
+.searchbar input[type=text] {
+    width: 55%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    /*z-index: 9;*/
+    box-shadow: 2px 2px 10px #ddd;
+}
+
+.searchbar button {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    height: 38px;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    /*z-index: 9;*/
+    box-shadow: 2px 2px 10px #ddd;
+}
+
+.searchbar button:hover {
+    background: #ccc;
+}
+
+.result-text{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.table-wrap{
+    height: 350px;
+    overflow-y: auto;
+}
+
+.table-dark{
+    margin: 0px;
+    color: #fff;
+    background-color: #2022249e;
+}
+
+.table-dark thead{
+    background-color: #333;
+}
+
+*[data-href] {
+  cursor: pointer;
+}
+td a, td a:hover {
+  display:inline-block;
+  min-height:100%;
+  width:100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+tbody tr:hover{
+    background-color: #aaaaaa73;
+}
+
+.container-for-center-aligned-form-page{
+    height: calc(100vh - 3.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#book-page{
+    text-align: left !important;
+    padding: 0.5rem 3rem!important;
+}
+
+#book-page .caption{
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 0px !important;
+}
+
+#book-page .book-info{
+    background-color: #cccccc52;
+    border-radius: 10px;
+    padding: 15px;
+}
+#book-page .book-info-head{
+    color: #ff0707;
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#book-page .book-info-text{
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#book-page .goodreads-heading{
+    font-size: 22px;
+    text-align: center;
+    color: #83ff9f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#book-page .form-container{
+    margin-top: 30px !important;
+    padding: 10px 0px !important;
+}
+
+.fa-star:before {
+  content: "\f005";
+}
+
+.rating-list li i.yellow {
+  color: #FFD700;
+}
+
+.rating-list li i.gray {
+  color: #bbb;
+}
+
+.list-inline>li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.rating-list li {
+  padding: 0px;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.form-container-margin{
+    margin: 0 auto;
+}
+
+.form-text-head{
+    font-size: 20px;
+    margin-left: 29px;
+}
+
+#book-page ul{
+    margin-bottom: 0;
+}
+
+.rating-list-container{
+    margin-left: 29px;
+}
+
+.textarea{
+    margin-left: 29px;
+}
+
+.textarea textarea{
+    width: 90%;
+    height: 90px;
+}
+
+.set-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.post{
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.user{
+    color: white;
+    border-bottom: 1px solid #ffffff78;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.review{
+    padding: 15px;
+}
+
+.tos{
+    text-align: right;
+    font-size: 13px;
+}
+
+.star-rating{
+    float: right;
+}
+
+.myinfo{
+    text-align: left;
+    padding-left: 29px;
+    padding-top: 10px;
+}
+
+.myinfo img{
+    height: 15px;
+    margin-right: 5px;
+}
+
+.form-container h5{
+    margin-bottom: 1.5rem;
+}
