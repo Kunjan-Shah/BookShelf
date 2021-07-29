@@ -31,6 +31,6 @@
 $ pip install -r requirements.txt
 $ export FLASK_APP=application.py
 $ export FLASK_DEBUG=1
-$ export DATABASE_URL=postgres://dlkkgmphzhihlp:18331f4277b582ca38f7846105023305f7c380188af46a8e7081d6786bd58319@ec2-52-207-25-133.compute-1.amazonaws.com:5432/dan942feio1fe6
+$ export DATABASE_URL=postgresql://dlkkgmphzhihlp:18331f4277b582ca38f7846105023305f7c380188af46a8e7081d6786bd58319@ec2-52-207-25-133.compute-1.amazonaws.com:5432/dan942feio1fe6
 $ flask run
  ```
